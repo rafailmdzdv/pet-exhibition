@@ -5,8 +5,6 @@ from src.domain.common.entity.entity import Entity
 
 
 class AggregateRoot(Entity, ABC):
-
     @classmethod
     @abstractmethod
-    def create(cls, **kwargs) -> Self:
-        ...
+    def create(cls, **kwargs) -> Self: ...
