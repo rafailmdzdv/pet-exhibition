@@ -1,21 +1,19 @@
 import datetime
 from dataclasses import dataclass
-from typing import Self
 from uuid import uuid4
 
 from src.domain.cat.entity import Cat
-from src.domain.common.entity.aggregate_root import AggregateRoot
+from src.domain.exhibition.entity import Exhibition
 
 
 @dataclass(frozen=True)
-class CatExhibition(AggregateRoot):
+class CatExhibition(Exhibition):
     cats: list[Cat]
-    date: datetime.datetime
 
     @classmethod
-    def create(cls, cats: list[Cat], date: datetime.datetime) -> Self:  # type: ignore[override]
+    def create(cls, cats: list[Cat]) -> Exhibition:  # type: ignore[override]
         return cls(
             id=uuid4(),
             cats=cats,
-            date=date,
+            date=datetime.datetime.now().date(),
         )
