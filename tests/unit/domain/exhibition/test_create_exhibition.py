@@ -9,4 +9,4 @@ def test_create_cat_exhibition(cats: list[Cat]) -> None:
         cats=cats,
     )
     assert exhibition.date == datetime.datetime.now().date()
-    assert exhibition.cats[0].name == "Bob"  # type: ignore
+    assert exhibition.participants[0].name == "Bob"  # type: ignore
