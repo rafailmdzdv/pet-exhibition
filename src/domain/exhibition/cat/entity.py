@@ -2,7 +2,7 @@ import datetime
 from dataclasses import dataclass
 from uuid import uuid4
 
-from src.domain.cat.entity import Cat
+from src.domain.animal.cat.entity import Cat
 from src.domain.exhibition.entity import Exhibition
 
 
