@@ -1,6 +1,6 @@
 import datetime
 
-from src.domain.cat.entity import Cat
+from src.domain.animal.cat.entity import Cat
 from src.domain.exhibition.cat.entity import CatExhibition
 
 

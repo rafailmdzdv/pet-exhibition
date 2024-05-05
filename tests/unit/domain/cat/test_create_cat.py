@@ -1,4 +1,4 @@
-from src.domain.cat.entity import Cat
+from src.domain.animal.cat.entity import Cat
 from src.domain.enums.breed import Breeds
 from src.domain.enums.color import Colors
 

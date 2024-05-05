@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from src.domain.cat.enum import CatBreeds
+from src.domain.animal.cat.enum import CatBreeds
 
 
 @dataclass(frozen=True)
