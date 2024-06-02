@@ -1,17 +1,17 @@
 import datetime
 from dataclasses import dataclass
-from uuid import uuid4
 
 from src.domain.animal.cat.entity import Cat
-from src.domain.exhibition.entity import Exhibition
+from src.domain.exhibition.common.aggregate import Exhibition
+from src.domain.exhibition.cat.value_objects.exhibition_id import CatExhibitionId
 
 
 @dataclass(frozen=True)
-class CatExhibition(Exhibition):
+class CatExhibition(Exhibition[CatExhibitionId]):
     @classmethod
-    def create(cls, cats: list[Cat]) -> Exhibition:  # type: ignore[override]
+    def create(cls, cats: list[Cat]) -> Exhibition:
         return cls(
-            id=uuid4(),
+            id=CatExhibitionId.generate(),
             participants=cats,
             date=datetime.datetime.now().date(),
         )

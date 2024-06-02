@@ -1,4 +1,3 @@
-
 from src.domain.common.breed import Breed
 
 
