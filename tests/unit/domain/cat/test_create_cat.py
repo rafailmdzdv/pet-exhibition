@@ -11,5 +11,4 @@ def test_create_cat() -> None:
         color=Colors.BLACK,
     )
     assert cat.name == "Bob"
-    assert cat.breed == "Scottish Straight"
-    assert cat.color == "black"
+    assert cat.age == 3

@@ -1,7 +1,7 @@
 import pytest
 
-from src.domain.animal.entity import Animal
 from src.domain.animal.cat.entity import Cat
+from src.domain.animal.common.aggregate import Animal
 from src.domain.enums.breed import Breeds
 from src.domain.enums.color import Colors
 
